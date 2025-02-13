@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arté Taidekurssit</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #carousel-section .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5); /* Tumma tausta */
+        padding: 20px;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .card {
+        border: none;
+      }
+
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: rgb(248, 249, 250);
+      }
+
+      .button {
+        border-color: darkcyan;
+        background-color: aliceblue;
+      }
+
+      .button:hover {
+        background-color: #b0c4b1;
+      }
+
+      footer {
+        background-color: rgb(248, 249, 250);
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="material-icons"> palette </span>
+            Arté Taidekurssit
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#kurssit">Kurssit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#taidetarvikkeet">Taidetarvikkeet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#meista">Meistä</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#yhteystiedot">Yhteystiedot</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main data-bs-spy="scroll" data-bs-target="navbar">
+      <section id="carousel-section">
+        <div id="carousel" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="pictures/palette.jpg"
+                class="d-block w-100 img-fluid"
+                alt="maalipaletti" />
+
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Opi maalaus taiteen ammattilaisilta</h5>
+                <p>
+                  Kattava valikoima maalauskursseja, jotka vievät taidot uudelle
+                  tasolle
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="pictures/maalaus.jpg"
+                class="d-block w-100"
+                alt="värikäs abstrakti taidemaalaus" />
+
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Värien yhdistäminen haltuun</h5>
+                <p>
+                  Opettele hallitsemaan värikombinaatioita ja luomaan
+                  visuaalisesti vaikuttavia teoksia
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="pictures/maalaustarvikkeet .jpg"
+                class="d-block w-100"
+                alt="maalipurkkeja ja siveltimiä" />
+
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Uutuutena nyt myös maalaustarvikkeet meiltä!</h5>
+                <p>
+                  Meiltä löydät laadukkaat ja kestävät taidevälineet visioitesi
+                  toteuttamiseen
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section 1 Kurssit -->
+      <section id="kurssit" class="mt-5">
+        <div class="container">
+          <h2 class="mb-4">Kurssit</h2>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <!--First column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/akryylimaaleja.jpg"
+                  alt="akryylimaaleja" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Akryylimaalauskurssi</h5>
+                  <p class="card-text">
+                    Tämä kurssi opettaa sinulle akryylimaalauksen perusteet.
+                  </p>
+                  <a href="#" class="btn button">Lue lisää</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/sormimaalaus.jpg"
+                  alt="lapsi maalaamassa" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Lasten maalauskurssi</h5>
+                  <p class="card-text">
+                    Lasten maalauskurssilla tutustutaan eri maalaustekniikoihin
+                    leikin kautta!
+                  </p>
+                  <a href="#" class="btn button">Lue lisää</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Third column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/kukkamaalaus.jpg"
+                  alt="kukkamaalaus" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Akvarellimaalauskurssi</h5>
+                  <p class="card-text">
+                    Tutustutaan akvarellimaaleihin kukka-asetelmia maalaamaalla.
+                  </p>
+                  <a href="#" class="btn button">Lue lisää</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Section 2 Taidetarvikkeet-->
+      <section id="taidetarvikkeet" class="mt-5">
+        <div class="container">
+          <h2 class="mb-4">Taidetarvikkeet</h2>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <!--First column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/maalauslehtio.jpg"
+                  alt="maalauslehtiö ja pensseleitä" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Aloittelijan setti</h5>
+                  <p class="card-text">
+                    Tässä setissä löytyy kaikki mitä aloittelija tarvitsee
+                    akvarellimaalaamisen aloitukseen.
+                  </p>
+                  <a href="#" class="btn button">Osta tästä</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Second column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/sivellinsetti.jpg"
+                  alt="siveltimiä purkissa" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Sivellinsetti</h5>
+                  <p class="card-text">
+                    Sivellinsetti sisältää 20 kpl laadukkaita siveltimiä, jotka
+                    sopivat kaikkiin maalilaatuihin.
+                  </p>
+                  <a href="#" class="btn button">Osta tästä</a>
+                </div>
+              </div>
+            </div>
+
+            <!--Third column-->
+            <div class="col">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="pictures/vesivarit.jpg"
+                  alt="maalipaletti" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Akvarellipaletti</h5>
+                  <p class="card-text">
+                    Paletti, jossa 15 kpl vahvapigmenttistä ja laadukasta
+                    akvarellimaalia.
+                  </p>
+
+                  <a href="#" class="btn button">Osta tästä</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="meista" class="mt-5">
+        <div class="container">
+          <h2 class="mb-4">Meistä</h2>
+
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center">
+                <img
+                  src="pictures/nainen_maalaamassa.jpg"
+                  class="img-fluid rounded-start about-image"
+                  alt="nainen maalaa kukkataulua" />
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Tule mukaan oppimaan ja kehittämään maalaustaitojasi
+                    kanssamme!
+                  </h5>
+                  <p class="card-text">
+                    Arté Taidekurssit on taideopetukseen erikoistunut yritys,
+                    joka tarjoaa korkealaatuisia kursseja eri
+                    maalaustekniikoissa ja taidetarvikkeiden myynnissä. Meillä
+                    on asiantuntevia opettajia, jotka opastavat sekä
+                    aloittelijat että kokeneet taiteilijat omalla taiteen
+                    polullaan.
+                  </p>
+                  <p>
+                    Tarjoamme kursseja eri ikäryhmille ja taitotasoille. Voit
+                    osallistua esimerkiksi akvarellimaalaus-, lastenmaalaus- tai
+                    asetelma maalauskurssille. Meiltä löydät myös laajan
+                    valikoiman maalaustarvikkeita, kuten siveltimiä, maaleja ja
+                    maalausvälineitä.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="yhteystiedot" class="mt-5">
+        <div class="container">
+          <h2 class="mb-4">Yhteystiedot</h2>
+
+          <table class="table table-borderless table-responsive">
+            <tbody>
+              <tr>
+                <th scope="row">Osoite</th>
+                <td>Merikarhunkuja 3, 02110 Espoo</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Asiakaspalvelun puhelinnumero</th>
+                <td>+358 40 12 321 44</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Sähköposti</th>
+                <td>asiakaspalvelu@arte.fi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="ukk" class="mt-5">
+        <div class="container">
+          <h2 class="mb-4">UKK</h2>
+
+          <div class="accordion" id="accordion-ukk">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne">
+                  Maksuvaihtoehdot
+                </button>
+              </h2>
+
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordion-first">
+                <div class="accordion-body">
+                  <p>
+                    Voit maksaa kurssit verkkopankkimaksulla, laskulla tai
+                    kulttuuriseteleillä. Lisätietoja saat tarvittaessa
+                    asiakaspalvelustamme.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  Voinko osallistua kursseille ilman aikaisempaa kokemusta?
+                </button>
+              </h2>
+
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordion-second">
+                <div class="accordion-body">
+                  <p>
+                    Ehdottomasti! Kurssimme sopivat niin vasta maalaamiseen
+                    tutustuvalle kuin jo kokeneemmalle konkarille. Opettajamme
+                    huomioivat yksilölliset osaamiserot ja opettavat sen
+                    mukaisesti.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Onko kursseillanne ja tuotteillanne peruutusoikeutta?
+                </button>
+              </h2>
+
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordion-third">
+                <div class="accordion-body">
+                  <p>
+                    Kyllä on! Kurssin ostohetkestä sinulla on 14 päivää aikaa
+                    peruttaa kurssille osallistuminen. Tuotteillamme on myös 14
+                    päivän palautusoikeus ostopäivästä lähtien.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-5">
+      <div class="container text-center">
+        <p>&copy; 2025 Arté Taidekurssit. Kaikki oikeudet pidätetään.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
